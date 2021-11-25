@@ -7,7 +7,7 @@
     <div class="slider">
         <div class="slider__wrapper">
          <div class="slider__item">
-            <div style="background: aqua;"><a href="goods.php?id=33"><img src="img/logo.png"></a></div>
+            <div><a href="goods.php?id=33"><img src="img/logo.png"></a></div>
           </div>
         </div>
         <a class="slider__control slider__control_left" href="#" role="button"></a>
