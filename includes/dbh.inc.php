@@ -247,7 +247,6 @@ function get_feedback($id_goods)
     global $conn;
     $sql = "SELECT * FROM feedback WHERE id_goods=$id_goods";
     $result = mysqli_query($conn, $sql);
-
     return $result;
 }
 
@@ -265,6 +264,14 @@ function delete_feedback($id)
     $sql = "DELETE FROM feedback WHERE id = $id";
     $result = mysqli_query($conn, $sql);
 
+}
+
+function get_slider()
+{
+    global $conn;
+    $sql = "SELECT * FROM goods ORDER BY RAND() LIMIT 10;";
+    $result = mysqli_query($conn, $sql);
+    return $result;
 }
 
 // Check connection

@@ -29,7 +29,7 @@
 
    
 
-    header("Location: ../admin/add-good.php");
+    header("Location: ../add-good.php");
     ob_end_flush();
 ?>
     

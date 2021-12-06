@@ -40,7 +40,7 @@
                         </div>
                     </div>
                     <div class="addPhoto">
-                    <font>Завантажте фото:  </font>
+                    Завантажте фото:  
                     <input type="file" name="file[]" accept="image/jpeg" multiple placeholder="Додати фото">
                     <label for="img_goods">Додати фото</label>
                     </div>                       

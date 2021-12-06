@@ -13,6 +13,11 @@ html, body {
     font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
+a {
+    all: unset;
+    cursor: pointer;
+}
+
 input:focus {
     outline: none
 }
@@ -43,7 +48,18 @@ header {
     margin: 0 auto;
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
 }
+
+.logo {
+    width: 3%;
+    height: 3%;
+}
+
+.logo img {
+    width: 50%;
+}
+
 
 .search {
     display: flex;
@@ -56,18 +72,16 @@ header {
     height: 100%;
     display: flex;
     flex-direction: row;
-
-
 }
 
 .login form,
-.search form{
+.search form {
     height: 100%;
     display: inherit;
 }
 
 .login form > input,
-.search input{
+.search input {
     padding: 1%;
     border: none;
     border-radius: 3px;
@@ -77,7 +91,7 @@ header {
 
 .login a,
 .login button,
-.search button{
+.search button {
     padding: 0.5em 1em 0.5em;
     box-shadow: 0 0 1em var(--tret-bg-color);
     border: none;
@@ -96,7 +110,7 @@ header {
 
 .login a:hover,
 .login button:hover,
-.search button:hover{
+.search button:hover {
     background-color: var(--sec-bg-color);
     color: var(--main-bg-color);
     box-shadow: 0 0 1em var(--secsh-bg-color);
@@ -127,28 +141,25 @@ h1 {
 /* signup.php */
 
 .form-signup {
-    margin: 0 auto;
+    margin: auto;
     padding-top: 20px;
-    width: 50%;
-
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
 }
 
 .form-signup input {
-    width: 100%;
-    padding: 0 15px;
-    margin-bottom: 6px;
+    padding: 0 1em;
+    margin-bottom: 0.5em;
     border: 1px solid var(--secsh-bg-color);
     border-radius: 4px;
     background-color: var(--sec-bg-color);
-    float: left;
     height: 2em;
+
 }
 
 .form-signup button {
-    display: block;
     height: 3em;
-    width: 100%;
-    margin: auto;
     border: none;
     border-radius: 4px;
     background-color: var(--main-bg-color);
@@ -156,13 +167,13 @@ h1 {
     text-transform: uppercase;
     text-align: center;
     box-shadow: none;
-
+    font-weight: bold;
 }
 
 .form-signup button:hover {
     color: var(--main-bg-color);
     background: var(--sec-bg-color);
-/ / box-shadow: 0 0 1 em var(--main-bg-color);
+    box-shadow: 0 0 1em var(--main-bg-color);
     outline: solid;
 }
 
@@ -188,109 +199,82 @@ h1 {
 
 /*-----------------Navigation menu-----------------*/
 
-
-.menu ul li a {
-    text-decoration: none;
-    color: var(--main-bg-color);
-    line-height: 28px;
-}
-
-.menu a:hover {
-    color: var(--main-bg-color);
-    text-shadow: 1px 1px 2px var(--tret-bg-color), 0 0 1em var(--sec-bg-color);
-}
-
-.menu li:hover {
-    border-bottom: 5px solid var(--main-bg-color);
+.menu {
+    display: flex;
+    flex-direction: row;
     color: var(--sec-bg-color);
+    font-weight: bold;
+    font-size: 22px;
 }
 
-.menu li {
-    display: inline-block;
-}
-
-.menu > li > a {
-    text-decoration: none;
-    color: var(--main-bg-color);
-}
-
-.menu > li > a:before {
-    background: var(--sec-bg-color);
-    border-radius: 50%;
-    transform: translate(-50%, 20px);
-    opacity: 0;
-    transition: .3s;
-}
-
-.menu li:hover,
-.menu a:before {
-    transform: translate(-50%, 0);
+.menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0 1em;
     cursor: pointer;
 }
 
+.submenu:first-child {
+    margin-top: 1.2em;
+}
+
 .submenu {
+    display: none;
     position: absolute;
-    text-align: center;
-    z-index: 4;
-    left: 50%;
-    top: 100%;
-    width: 150px;
-    padding: 15px 0 15px;
-    margin-top: 5px;
-    background: var(--sec-bg-color);
-    border-radius: 5px;
-    box-shadow: 0 0 30px var(--main-bg-color);
-    box-sizing: border-box;
-    visibility: hidden;
-    opacity: 0;
-    transform: translate(-50%, 20px);
-    transition: .3s;
 }
 
-.menu > li:hover .submenu {
-    visibility: visible;
-    opacity: 1;
-    transform: translate(-50%, 0);
+.submenu > li {
+    background: var(--main-bg-color);
 }
 
+.submenu li:hover {
+    text-decoration: underline overline;
+}
+
+.menu ul:hover
 .submenu {
-    transition: .3s linear;
+    display: block;
 }
-
 /*-----------------Navigation menu-----------------*/
 
 /*--------------------Slider---------------------*/
 .slider-div {
     border-bottom: 1px solid var(--sec-bg-color);
+    margin-top: 5%;
 }
 
 .slider {
     position: relative;
     overflow: hidden;
-    opacity: 0.8;
-    margin-top: 50px;
-    width: 1400px;
-    margin-left: 300px;
-    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
 }
 
-
 .slider__wrapper {
-    display: flex;
     transition: transform 0.6s ease;
-    height: 400px;
+    margin: 0 5%;
+
 }
 
 .slider__wrapper img {
-    width: 500px;
-    height: 400px;
+    height: 50vh;
+    margin: 3% 0;
 }
 
-
 .slider__item {
-    border: 1px solid var(--sec-bg-color);;
+    border: 1px solid var(--sec-bg-color);
     flex: 0 0 33.333333%;
-    max-width: 33.333333%;
+    font-size: 1.5em;
+}
+
+.slider__item:hover {
+    box-shadow: inset 0 0 1rem var(--secsh-bg-color);
+    border-radius: 5%;
+}
+
+.slider__item > div {
+    text-align: center;
 }
 
 .slider__control {
@@ -299,11 +283,11 @@ h1 {
     display: none;
     align-items: center;
     justify-content: center;
-    width: 40px;
     color: var(--sec-bg-color);
     text-align: center;
     opacity: 0.5;
-    height: 50px;
+    padding: 1%;
+    height: 20%;
     transform: translateY(-50%);
     background: var(--tret-bg-color);;
 }
@@ -345,10 +329,6 @@ h1 {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }
 
-.slider__item > div {
-    line-height: 400px;
-    text-align: center;
-}
 
 /*--------------------Slider---------------------*/
 /*-----------------Content-----------------*/
@@ -370,12 +350,12 @@ footer {
 .socials {
     display: flex;
     justify-content: center;
-    padding: 10px;
+    padding-top: 1vh;
 }
 
 .socials img {
-    height: 50px;
-    width: 50px;
+    height: 5vh;
+    width: auto;
 }
 
 .copyright {
@@ -401,6 +381,7 @@ footer {
     color: var(--tret-bg-color);;
     margin: 20px;
     float: left;
+    cursor: pointer;
 }
 
 .block5 img {
@@ -410,12 +391,11 @@ footer {
 }
 
 .block5:hover {
-    transform: scale(1.1, 1.1);
     box-shadow: 0 0 5px;
 }
 
 .block5 h2 {
-    margin-top: 10px;
+    margin-top: 2%;
 }
 
 /*-----------------goods-----------------*/
@@ -547,6 +527,7 @@ footer {
     border: solid var(--main-bg-color);
     border-radius: 10rem;
     margin-bottom: 1vh;
+    cursor: pointer;
 }
 
 .adm-panel a:first-child {
@@ -561,7 +542,6 @@ footer {
 
 .adm-signup {
     height: 100%;
-    width: 70px;
     padding: 0 6px;
     border: none;
     border-radius: 4px;
