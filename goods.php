@@ -3,9 +3,7 @@ error_reporting(0);
 require 'header.php' ?>
     <main>
         <?php $goods = get_good($_GET['id']);
-        foreach ($goods
-
-        as $good) :
+        foreach ($goods as $good) :
         ?>
         <div class="block-god">
             <div class="block-img">

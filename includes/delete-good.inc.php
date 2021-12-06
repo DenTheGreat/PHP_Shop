@@ -2,7 +2,7 @@
   require 'dbh.inc.php';
 
     delete_good($_GET['id']);
-    header("Location: ../admin/delete-good.php");
+    header("Location: ../delete-good.php");
     $dir='../img/';
     $dir .=$_GET['id'];
     //Delete directory

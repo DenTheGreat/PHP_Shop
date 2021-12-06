@@ -9,5 +9,5 @@
 
     update_good($name, $price, $descr, $category, $id);
 
-    header("Location: ../admin/edit-good.php");
+    header("Location: ../edit-good.php");
 ?>

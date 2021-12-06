@@ -222,6 +222,7 @@ h1 {
 .submenu {
     display: none;
     position: absolute;
+
 }
 
 .submenu > li {
@@ -229,13 +230,15 @@ h1 {
 }
 
 .submenu li:hover {
-    text-decoration: underline overline;
+    color: var(--tret-bg-color);
+    background: var(--sec-bg-color);
 }
 
 .menu ul:hover
 .submenu {
     display: block;
 }
+
 /*-----------------Navigation menu-----------------*/
 
 /*--------------------Slider---------------------*/
@@ -254,21 +257,24 @@ h1 {
 .slider__wrapper {
     transition: transform 0.6s ease;
     margin: 0 5%;
-
+    max-width: 33.333333%;
+    text-align: center;
 }
 
 .slider__wrapper img {
     height: 50vh;
     margin: 3% 0;
+
 }
 
 .slider__item {
     border: 1px solid var(--sec-bg-color);
     flex: 0 0 33.333333%;
     font-size: 1.5em;
+
 }
 
-.slider__item:hover {
+.slider__wrapper:hover {
     box-shadow: inset 0 0 1rem var(--secsh-bg-color);
     border-radius: 5%;
 }
@@ -476,6 +482,7 @@ footer {
     height: 100%;
     border: 1px gray solid;
     margin-bottom: 40px;
+
 }
 
 .name-char {
